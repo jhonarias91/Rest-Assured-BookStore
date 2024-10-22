@@ -90,10 +90,10 @@ bookStoreAssuredTest/
 
 ## Explicación de la estructura:
 
-1. src/test/java/com/bookstore/config/ConfigLoader.java: Clase encargada de cargar las propiedades desde el archivo properties.properties ubicado en src/test/resources.
-2. src/test/java/com/bookstore/model/: Contiene las clases de modelo (por ejemplo, Book, Error, y User), que representan objetos que se utilizan en las pruebas.
-3. src/test/java/com/bookstore/page/: Implementación del Page Object Model (POM), que contiene las clases LoginPage y ProfilePage, para modelar las interacciones con las páginas de la aplicación.
-4. ApiUtil.java: Clase que configura y maneja Playwright para la automatización de la interfaz de usuario y RestAssured para interactuar con la API.
-5. UserLoginTest.java: Clase de prueba principal que valida el flujo de creación de usuario, autenticación y eliminación.
-6. src/test/resources/properties.properties: Archivo de configuración que contiene las propiedades como URL base y credenciales de prueba.
-7. pom.xml: Archivo Maven para la gestión de dependencias.
+1. ```src/test/java/com/bookstore/config/ConfigLoader.java``` Clase encargada de cargar las propiedades desde el archivo properties.properties ubicado en src/test/resources.
+2. ```src/test/java/com/bookstore/model/``` Contiene las clases de modelo (por ejemplo, Book, Error, y User), que representan objetos que retorna la api al crear el usuario.
+3. ```src/test/java/com/bookstore/page/``` Implementación del Page Object Model (POM), que contiene las clases LoginPage y ProfilePage, para modelar las interacciones con las páginas de la aplicación.
+4. ```ApiUtil.java``` Clase que configura y maneja Playwright para la automatización de la interfaz de usuario y RestAssured para interactuar con la API.
+5. ```UserLoginTest.java``` Clase de prueba principal que valida el flujo de creación de usuario, autenticación y eliminación.
+6. ```src/test/resources/properties.properties``` Archivo de configuración que contiene las propiedades como URL base, credenciales de prueba y activar/desactivar modo headless.
+7. ```pom.xml``` Archivo Maven para la gestión de dependencias.
