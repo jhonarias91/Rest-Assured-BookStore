@@ -2,7 +2,6 @@ package com.bookstore.model;
 
 public class Error {
 
-
     private String code;
     private String message;
     public Error() {

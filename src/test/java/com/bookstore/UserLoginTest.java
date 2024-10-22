@@ -1,29 +1,55 @@
 package com.bookstore;
 
-import com.bookstore.model.Error;
+import com.bookstore.config.ConfigLoader;
 import com.bookstore.model.User;
+import com.bookstore.page.LoginPage;
+import com.bookstore.page.ProfilePage;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class UserLoginTest extends ApiUtil {
 
-    @Test
-    public void testLoginUser() {
+    private LoginPage loginPage;
+    private ProfilePage profilePage;
 
-        final Response newUserResponse = createUser(getARandomUserName(), "123456abC*");
-        if (newUserResponse.getStatusCode() != 201) {
-            Error error = newUserResponse.as(Error.class);
-            System.out.println(error.getMessage());
-            return;
-        }
-        //Assume the userCreation is ok, the password rules hasn't change and doesn't exists a user with the same username
+    @Test
+    public void testLoginDeleteUser() {
+        System.out.println("Estado de 'page' en test: " + page);
+        assertNotNull(page, "Page should not be null. Make sure it is initialized in setUp().");
+
+        //Create the user using restAssured
+        final String userName = getARandomUserName();
+        final String password = ConfigLoader.getProperty("test.password");
+        final Response newUserResponse = createUser(userName, password);
+        newUserResponse.then()
+                .statusCode(201);
         final User user = newUserResponse.as(User.class);
-        System.out.println(user.getUserID());
+        assertNotNull(user);
+
+        this.page.navigate(ConfigLoader.getProperty("demoqa.host.base.url")+"login");
+        this.loginPage = new LoginPage(this.page);
+        this.profilePage = new ProfilePage(this.page);
+
+        //login user credentials sended using restAssured
+        this.loginPage.login(user.getUserName(), password);
+
+        this.profilePage.deleteAccount();
+        //trying to login after user deleted
+        this.loginPage.login(user.getUserName(), password);
+
+        final boolean errorPresent = this.loginPage.isErrorPresent(ConfigLoader.getProperty("login.invalid.username.error"));
+        assertTrue(errorPresent);
     }
 
-
-    private String getARandomUserName(){
+    private String getARandomUserName() {
         return "usr" + System.currentTimeMillis();
     }
+
 
 }

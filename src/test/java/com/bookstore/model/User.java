@@ -1,5 +1,6 @@
 package com.bookstore.model;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
@@ -7,7 +8,9 @@ import java.util.List;
 public class User {
 
     private String userID;
-    @JsonProperty("username")
+
+    @JsonProperty("userName") // This will be use for serialization
+    @JsonAlias("username")    // This will be use for deserialization
     private String userName;
     private String password;
 
@@ -16,15 +19,15 @@ public class User {
     public User() {
     }
 
-    public User(String userName, String password) {
-        this.userName = userName;
+    public User(String username, String password) {
+        this.userName = username;
         this.password = password;
     }
 
 
-    public User(String userID, String userName, List<Book> books) {
+    public User(String userID, String username, List<Book> books) {
         this.userID = userID;
-        this.userName = userName;
+        this.userName = username;
         this.books = books;
     }
 
@@ -60,4 +63,13 @@ public class User {
         this.books = books;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "userID='" + userID + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", books=" + books +
+                '}';
+    }
 }
