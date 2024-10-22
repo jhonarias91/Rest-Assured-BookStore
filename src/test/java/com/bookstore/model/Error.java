@@ -1,6 +1,4 @@
-package com.jhonarias91.model;
-
-import java.util.List;
+package com.bookstore.model;
 
 public class Error {
 

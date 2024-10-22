@@ -1,6 +1,6 @@
-package com.jhonarias91;
+package com.bookstore;
 
-import com.jhonarias91.model.User;
+import com.bookstore.model.User;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 

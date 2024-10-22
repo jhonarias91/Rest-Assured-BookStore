@@ -1,7 +1,7 @@
-package com.jhonarias91;
+package com.bookstore;
 
-import com.jhonarias91.model.Error;
-import com.jhonarias91.model.User;
+import com.bookstore.model.Error;
+import com.bookstore.model.User;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 
