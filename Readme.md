@@ -1,4 +1,4 @@
-# Reto 1 Rest-Assured BookStore Project
+# Rest-Assured BookStore Project
 
 Este proyecto combina el uso de **Rest-Assured** para automatizar la creación de usuarios mediante una API y **Playwright**
 para la automatización de UI, ejecutando pruebas de login y eliminación de usuarios en un sistema de prueba. usando para ello: https://demoqa.com/
