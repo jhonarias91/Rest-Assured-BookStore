@@ -1,13 +1,40 @@
 {
 	"info": {
 		"_postman_id": "5885956a-3ca3-4cfa-9425-d86ddba7220b",
-		"name": "NASA",
+		"name": "NASA APIs",
+		"description": "Este catálogo se centra en API de uso general",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "13483282"
 	},
 	"item": [
 		{
 			"name": "GET Earth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"\\\"url\\\":\\\"https://earthengine.googleapis.com/\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"id\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 5s\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -179,6 +206,33 @@
 		},
 		{
 			"name": "GET APOD",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"\\\"url\\\":\\\"https://apod.nasa.gov/\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    let date = pm.request.url.query.get('date');\r",
+							"    pm.expect(pm.response.text()).to.include(date);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 5s\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -322,6 +376,33 @@
 		},
 		{
 			"name": "GET Mars Rover Photos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"\\\"img_src\\\":\\\"https://mars.nasa.gov/\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    let date = pm.request.url.query.get('earth_date');\r",
+							"    pm.expect(pm.response.text()).to.include(date);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 5s\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
