@@ -98,9 +98,10 @@ bookStoreAssuredTest/
 6. ```src/test/resources/properties.properties``` Archivo de configuración que contiene las propiedades como URL base, credenciales de prueba y activar/desactivar modo headless.
 7. ```pom.xml``` Archivo Maven para la gestión de dependencias.
 
-
 ## Reto 2:
 En la raíz del proyecto se encuentra la carpeta postman, en la cual agrega la collección exportada desde postman.
+
+Las variables utilizadas son de tipo collection variables
 
 En esta se consumen las siguientes APIs:
 
@@ -163,3 +164,7 @@ Las pruebas se ejecutan utilizando una fecha, una página específica y la cáma
     Se verifica que la fecha solicitada (earth_date) esté presente y coincida con la fecha proporcionada en la solicitud.
 - Validación del tiempo de respuesta (menor de 25 segundos):
   Se asegura que el tiempo de respuesta de la API sea menor a 25 segundos, lo que garantiza la eficiencia del servicio.
+
+
+## Notas
+- Las evidencias tanto del reto 1 como del reto 2 están en el directorio /evideces/reto1 y /evideces/reto2 respectivamente.
