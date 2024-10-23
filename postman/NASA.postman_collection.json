@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "5885956a-3ca3-4cfa-9425-d86ddba7220b",
+		"_postman_id": "9e506376-ccb4-4ea9-9f97-59ec1ef46704",
 		"name": "NASA APIs",
 		"description": "Este catálogo se centra en API de uso general",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -79,7 +79,7 @@
 			},
 			"response": [
 				{
-					"name": "response",
+					"name": "200",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
@@ -128,7 +128,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Wed, 23 Oct 2024 04:17:09 GMT"
+							"value": "Wed, 23 Oct 2024 18:31:15 GMT"
 						},
 						{
 							"key": "Content-Type",
@@ -152,7 +152,7 @@
 						},
 						{
 							"key": "Age",
-							"value": "0"
+							"value": "2"
 						},
 						{
 							"key": "Strict-Transport-Security",
@@ -164,7 +164,7 @@
 						},
 						{
 							"key": "X-Api-Umbrella-Request-Id",
-							"value": "cimubs4jopb1a0l4p0j0"
+							"value": "cinair5tt6c8c162hu9g"
 						},
 						{
 							"key": "X-Cache",
@@ -180,11 +180,11 @@
 						},
 						{
 							"key": "X-Ratelimit-Remaining",
-							"value": "1946"
+							"value": "1994"
 						},
 						{
 							"key": "X-Vcap-Request-Id",
-							"value": "3bd7b6b8-7907-4b7f-44dd-066d377d0720"
+							"value": "afe48ac3-0759-461d-70b1-a16c9cc65ff5"
 						},
 						{
 							"key": "X-Xss-Protection",
@@ -200,7 +200,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"date\": \"2024-08-31T15:18:20.654000\",\n    \"id\": \"LANDSAT/LC08/C02/T1_L2/LC08_009056_20240831\",\n    \"resource\": {\n        \"dataset\": \"LANDSAT/LC08/C02/T1_L2\",\n        \"planet\": \"earth\"\n    },\n    \"service_version\": \"v5000\",\n    \"url\": \"https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/thumbnails/5b9ef8ddfd3483c59d8937984c159deb-654f464c3e02ecb69680ad16a3493442:getPixels\"\n}"
+					"body": "{\n    \"date\": \"2024-08-31T15:18:20.654000\",\n    \"id\": \"LANDSAT/LC08/C02/T1_L2/LC08_009056_20240831\",\n    \"resource\": {\n        \"dataset\": \"LANDSAT/LC08/C02/T1_L2\",\n        \"planet\": \"earth\"\n    },\n    \"service_version\": \"v5000\",\n    \"url\": \"https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/thumbnails/71b7ecddd1bf997acda9763d69ccca3a-b69dc5a0b3ab3dbd6860ec81541accae:getPixels\"\n}"
 				}
 			]
 		},
@@ -261,12 +261,12 @@
 			},
 			"response": [
 				{
-					"name": "response",
+					"name": "200",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/planetary/apod?api_key={{api_key}}&date=2024-01-01",
+							"raw": "{{url}}/planetary/apod?date=2024-01-01&api_key={{api_key}}",
 							"host": [
 								"{{url}}"
 							],
@@ -276,14 +276,14 @@
 							],
 							"query": [
 								{
-									"key": "api_key",
-									"value": "{{api_key}}",
-									"description": "key"
-								},
-								{
 									"key": "date",
 									"value": "2024-01-01",
 									"description": "The date of the APOD image "
+								},
+								{
+									"key": "api_key",
+									"value": "{{api_key}}",
+									"description": "key"
 								}
 							]
 						}
@@ -294,7 +294,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Wed, 23 Oct 2024 04:17:55 GMT"
+							"value": "Wed, 23 Oct 2024 18:32:03 GMT"
 						},
 						{
 							"key": "Content-Type",
@@ -318,7 +318,7 @@
 						},
 						{
 							"key": "Age",
-							"value": "1"
+							"value": "0"
 						},
 						{
 							"key": "Content-Encoding",
@@ -338,7 +338,7 @@
 						},
 						{
 							"key": "X-Api-Umbrella-Request-Id",
-							"value": "cimuc7acukcu6preff0g"
+							"value": "cinaj774q5mp7o1ujsc0"
 						},
 						{
 							"key": "X-Cache",
@@ -354,11 +354,11 @@
 						},
 						{
 							"key": "X-Ratelimit-Remaining",
-							"value": "1946"
+							"value": "1993"
 						},
 						{
 							"key": "X-Vcap-Request-Id",
-							"value": "d9a8bf15-1d35-4825-5a0d-7f8d0c9a101f"
+							"value": "1eb52fc0-5dd8-43b7-5da6-d869e4b898d9"
 						},
 						{
 							"key": "X-Xss-Protection",
@@ -445,12 +445,12 @@
 			},
 			"response": [
 				{
-					"name": "response",
+					"name": "200",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{url}}/mars-photos/api/v1/rovers/Perseverance/photos?earth_date=2024-10-20&page=2&api_key={{api_key}}&camera=NAVCAM_LEFT",
+							"raw": "{{url}}/mars-photos/api/v1/rovers/Perseverance/photos?earth_date=2024-10-20&page=2&camera=NAVCAM_LEFT&api_key={{api_key}}",
 							"host": [
 								"{{url}}"
 							],
@@ -474,14 +474,14 @@
 									"description": "Paginated Results"
 								},
 								{
-									"key": "api_key",
-									"value": "{{api_key}}",
-									"description": "key"
-								},
-								{
 									"key": "camera",
 									"value": "NAVCAM_LEFT",
 									"description": "Navigation Camera - Left"
+								},
+								{
+									"key": "api_key",
+									"value": "{{api_key}}",
+									"description": "key"
 								}
 							]
 						}
@@ -492,7 +492,7 @@
 					"header": [
 						{
 							"key": "Date",
-							"value": "Wed, 23 Oct 2024 04:18:36 GMT"
+							"value": "Wed, 23 Oct 2024 18:32:18 GMT"
 						},
 						{
 							"key": "Content-Type",
@@ -536,11 +536,11 @@
 						},
 						{
 							"key": "Report-To",
-							"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1729657115&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=RQnfG0zD%2BMteSSoQHsblFefpdPJK%2BRxqCdGhGJZRldI%3D\"}]}"
+							"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1729708337&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=U4DbAUPiE7N%2BZ71Vb3dnJvLJ9BCM%2F2OVOb8perEt%2FoE%3D\"}]}"
 						},
 						{
 							"key": "Reporting-Endpoints",
-							"value": "heroku-nel=https://nel.heroku.com/reports?ts=1729657115&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=RQnfG0zD%2BMteSSoQHsblFefpdPJK%2BRxqCdGhGJZRldI%3D"
+							"value": "heroku-nel=https://nel.heroku.com/reports?ts=1729708337&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=U4DbAUPiE7N%2BZ71Vb3dnJvLJ9BCM%2F2OVOb8perEt%2FoE%3D"
 						},
 						{
 							"key": "Strict-Transport-Security",
@@ -564,7 +564,7 @@
 						},
 						{
 							"key": "X-Api-Umbrella-Request-Id",
-							"value": "cimuch6cg73nmlrjjlt0"
+							"value": "cinajal7v0lkptr40j30"
 						},
 						{
 							"key": "X-Cache",
@@ -588,19 +588,19 @@
 						},
 						{
 							"key": "X-Ratelimit-Remaining",
-							"value": "1946"
+							"value": "1992"
 						},
 						{
 							"key": "X-Request-Id",
-							"value": "fbc4643e-9ba9-45c2-b39a-98001eb753e6"
+							"value": "0e0bea55-d422-4e64-a436-940ef2e08207"
 						},
 						{
 							"key": "X-Runtime",
-							"value": "0.467944"
+							"value": "0.399688"
 						},
 						{
 							"key": "X-Vcap-Request-Id",
-							"value": "523d5691-9b7f-4380-4629-eed1de7bcbba"
+							"value": "50d54845-9a00-424f-69f1-efaa2b183ae7"
 						},
 						{
 							"key": "X-Xss-Protection",
@@ -647,7 +647,7 @@
 		},
 		{
 			"key": "url",
-			"value": "https://api.nasa.gov/",
+			"value": "https://api.nasa.gov",
 			"type": "string"
 		}
 	]
