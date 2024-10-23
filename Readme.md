@@ -1,4 +1,4 @@
-# Rest-Assured BookStore Project
+# Reto 1 Rest-Assured BookStore Project
 
 Este proyecto combina el uso de **Rest-Assured** para automatizar la creación de usuarios mediante una API y **Playwright**
 para la automatización de UI, ejecutando pruebas de login y eliminación de usuarios en un sistema de prueba. usando para ello: https://demoqa.com/
@@ -99,11 +99,67 @@ bookStoreAssuredTest/
 7. ```pom.xml``` Archivo Maven para la gestión de dependencias.
 
 
-## Punto 2:
-En la raíz del proyecto se encuentra la carpeta postman, en la cual agrega la collección exportada desde postam.
+## Reto 2:
+En la raíz del proyecto se encuentra la carpeta postman, en la cual agrega la collección exportada desde postman.
 
 En esta se consumen las siguientes APIs:
 
-- **API Earth** Imagenes satelitales 
-- **API APOD** Imagen astronómica del día 
-- **Mars Rover Photos** Imagenes recopiladas por los rovers en Marte
+### **API Earth** Imagenes satelitales
+```bathc
+curl --location 'https://api.nasa.gov/planetary/earth/assets?lat=6.200191&lon=-75.578561&date=2024-09-01&dim=0.1&api_key=pfPbpRLijLdzA0PJ8yRb7Im8mmogydBygkIcUTTf' 
+```
+**Pruebas:**
+
+Este conjunto de pruebas se ejecuta para verificar la correcta respuesta de la API de imágenes satelitales de NASA Earth, basada en la latitud, longitud y fecha proporcionadas. Las pruebas incluyen las siguientes validaciones:
+
+- Código de estado de la respuesta (200 OK):
+    Se comprueba que el código de estado HTTP sea 200, lo que indica que la solicitud fue procesada correctamente por el servidor.
+    
+- Validación de la URL en el cuerpo de la respuesta:
+    Se verifica que el cuerpo de la respuesta contenga una URL válida que apunte a los recursos de Google Earth Engine.
+  
+- Validación del campo 'id' en el cuerpo de la respuesta:
+    Se asegura que el campo "id" esté presente en el cuerpo de la respuesta, lo cual es fundamental para identificar el recurso solicitado.
+    
+- Validación del tiempo de respuesta (menor de 5 segundos):
+    Se garantiza que el tiempo de respuesta de la API sea inferior a 5 segundos, comprobando el rendimiento del servicio.
+
+
+### **API APOD** Imagen astronómica del día
+```bathc
+curl --location 'https://api.nasa.gov/planetary/apod?date=2024-01-01&api_key=pfPbpRLijLdzA0PJ8yRb7Im8mmogydBygkIcUTTf' 
+```
+
+**Pruebas:**
+
+Estas se enfocan en validar la respuesta de la API de la "Astronomy Picture of the Day" (APOD) de la NASA, utilizando una fecha específica y una clave de API. Las validaciones que se realizan son las siguientes:
+
+- Código de estado de la respuesta (200 OK):
+    Se verifica que la API responda con un código de estado 200, lo que indica que la solicitud fue procesada exitosamente.
+- Validación de la URL en el cuerpo de la respuesta:
+    Se comprueba que el cuerpo de la respuesta incluya la URL de la imagen del día, asegurándose de que provenga del dominio correcto de NASA APOD.
+    
+- Validación del parámetro de fecha:
+    Se valida que la fecha solicitada esté correctamente reflejada en la respuesta, garantizando que se reciba la imagen del día correspondiente.
+
+- Validación del tiempo de respuesta (menor de 5 segundos):
+    Se asegura que el tiempo de respuesta de la API sea inferior a 5 segundos, lo que garantiza que el servicio está respondiendo con buen rendimiento.
+
+### **Mars Rover Photos** Imagenes recopiladas por los rovers en Marte
+```bathc
+curl --location 'https://api.nasa.gov/mars-photos/api/v1/rovers/Perseverance/photos?earth_date=2024-10-20&page=2&camera=NAVCAM_LEFT&api_key=pfPbpRLijLdzA0PJ8yRb7Im8mmogydBygkIcUTTf' 
+```
+
+**Pruebas:**
+
+Estas pruebas se centra en verificar la respuesta de la API que proporciona imágenes capturadas por el rover Perseverance en Marte. 
+Las pruebas se ejecutan utilizando una fecha, una página específica y la cámara NAVCAM_LEFT como parámetros de consulta. Las validaciones que se realizan son las siguientes:
+
+- Código de estado de la respuesta (200 OK):
+    Se asegura que el servidor responda con un código de estado 200, lo que indica que la solicitud fue exitosa.
+- Validación de la URL de la imagen en el cuerpo de la respuesta:
+    Se comprueba que el cuerpo de la respuesta contenga una URL válida que apunte a la ubicación de las imágenes en el dominio de NASA.
+- Validación del parámetro de fecha:
+    Se verifica que la fecha solicitada (earth_date) esté presente y coincida con la fecha proporcionada en la solicitud.
+- Validación del tiempo de respuesta (menor de 25 segundos):
+  Se asegura que el tiempo de respuesta de la API sea menor a 25 segundos, lo que garantiza la eficiencia del servicio.

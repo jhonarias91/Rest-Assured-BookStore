@@ -4,10 +4,12 @@ import com.bookstore.config.ConfigLoader;
 import com.bookstore.model.User;
 import com.bookstore.page.LoginPage;
 import com.bookstore.page.ProfilePage;
+import com.microsoft.playwright.Page;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
+
+import java.nio.file.Paths;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -36,13 +38,14 @@ public class UserLoginTest extends ApiUtil {
         this.loginPage = new LoginPage(this.page);
         this.profilePage = new ProfilePage(this.page);
 
+        page.screenshot(new Page.ScreenshotOptions().setFullPage(true).setPath(Paths.get("evidences/reto1", "login.png")));
         //login user credentials sended using restAssured
         this.loginPage.login(user.getUserName(), password);
-
+        page.screenshot(new Page.ScreenshotOptions().setFullPage(true).setPath(Paths.get("evidences/reto1", "profile.png")));
         this.profilePage.deleteAccount();
         //trying to login after user deleted
         this.loginPage.login(user.getUserName(), password);
-
+        page.screenshot(new Page.ScreenshotOptions().setFullPage(true).setPath(Paths.get("evidences/reto1", "invalidUsername.png")));
         final boolean errorPresent = this.loginPage.isErrorPresent(ConfigLoader.getProperty("login.invalid.username.error"));
         assertTrue(errorPresent);
     }
