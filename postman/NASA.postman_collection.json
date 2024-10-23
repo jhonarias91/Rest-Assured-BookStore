@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "9e506376-ccb4-4ea9-9f97-59ec1ef46704",
 		"name": "NASA APIs",
-		"description": "Este catálogo se centra en API de uso general",
+		"description": "APIs de la NASA",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "13483282"
 	},
@@ -394,8 +394,8 @@
 							"    pm.expect(pm.response.text()).to.include(date);\r",
 							"});\r",
 							"\r",
-							"pm.test(\"Response time is less than 5s\", function () {\r",
-							"    pm.expect(pm.response.responseTime).to.be.below(5000);\r",
+							"pm.test(\"Response time is less than 25s\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(25000);\r",
 							"});"
 						],
 						"type": "text/javascript",

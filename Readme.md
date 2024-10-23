@@ -100,10 +100,12 @@ bookStoreAssuredTest/
 
 
 ## Punto 2:
-En la raíz del proyecto se encuentra la carpeta postman, en la cual agrega la collección exportada desde postam.
+En la raíz del proyecto se encuentra la carpeta postman, en la cual agrega la collección con las peticiones a las APIs de la NASA
 
 En esta se consumen las siguientes APIs:
 
 - **API Earth** Imagenes satelitales 
 - **API APOD** Imagen astronómica del día 
 - **Mars Rover Photos** Imagenes recopiladas por los rovers en Marte
+
+Las variables utilizadas son de tipo collection variables
