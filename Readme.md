@@ -97,3 +97,13 @@ bookStoreAssuredTest/
 5. ```UserLoginTest.java``` Clase de prueba principal que valida el flujo de creación de usuario, autenticación y eliminación.
 6. ```src/test/resources/properties.properties``` Archivo de configuración que contiene las propiedades como URL base, credenciales de prueba y activar/desactivar modo headless.
 7. ```pom.xml``` Archivo Maven para la gestión de dependencias.
+
+
+## Punto 2:
+En la raíz del proyecto se encuentra la carpeta postman, en la cual agrega la collección exportada desde postam.
+
+En esta se consumen las siguientes APIs:
+
+- **API Earth** Imagenes satelitales 
+- **API APOD** Imagen astronómica del día 
+- **Mars Rover Photos** Imagenes recopiladas por los rovers en Marte

@@ -1,0 +1,573 @@
+{
+	"info": {
+		"_postman_id": "5885956a-3ca3-4cfa-9425-d86ddba7220b",
+		"name": "NASA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13483282"
+	},
+	"item": [
+		{
+			"name": "GET Earth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/planetary/earth/assets?lat=6.200191&lon=-75.578561&date=2024-09-01&dim=0.1&api_key={{api_key}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"planetary",
+						"earth",
+						"assets"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "6.200191",
+							"description": "Latitude"
+						},
+						{
+							"key": "lon",
+							"value": "-75.578561",
+							"description": "Longitude"
+						},
+						{
+							"key": "date",
+							"value": "2024-09-01",
+							"description": "date of image"
+						},
+						{
+							"key": "dim",
+							"value": "0.1",
+							"description": "width and height of image in degrees"
+						},
+						{
+							"key": "api_key",
+							"value": "{{api_key}}",
+							"description": "key"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/planetary/earth/assets?lat=6.200191&lon=-75.578561&date=2024-09-01&dim=0.1&api_key={{api_key}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"planetary",
+								"earth",
+								"assets"
+							],
+							"query": [
+								{
+									"key": "lat",
+									"value": "6.200191",
+									"description": "Latitude"
+								},
+								{
+									"key": "lon",
+									"value": "-75.578561",
+									"description": "Longitude"
+								},
+								{
+									"key": "date",
+									"value": "2024-09-01",
+									"description": "date of image"
+								},
+								{
+									"key": "dim",
+									"value": "0.1",
+									"description": "width and height of image in degrees"
+								},
+								{
+									"key": "api_key",
+									"value": "{{api_key}}",
+									"description": "key"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 23 Oct 2024 04:17:09 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Age",
+							"value": "0"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Via",
+							"value": "https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])"
+						},
+						{
+							"key": "X-Api-Umbrella-Request-Id",
+							"value": "cimubs4jopb1a0l4p0j0"
+						},
+						{
+							"key": "X-Cache",
+							"value": "MISS"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Ratelimit-Limit",
+							"value": "2000"
+						},
+						{
+							"key": "X-Ratelimit-Remaining",
+							"value": "1946"
+						},
+						{
+							"key": "X-Vcap-Request-Id",
+							"value": "3bd7b6b8-7907-4b7f-44dd-066d377d0720"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"date\": \"2024-08-31T15:18:20.654000\",\n    \"id\": \"LANDSAT/LC08/C02/T1_L2/LC08_009056_20240831\",\n    \"resource\": {\n        \"dataset\": \"LANDSAT/LC08/C02/T1_L2\",\n        \"planet\": \"earth\"\n    },\n    \"service_version\": \"v5000\",\n    \"url\": \"https://earthengine.googleapis.com/v1alpha/projects/earthengine-legacy/thumbnails/5b9ef8ddfd3483c59d8937984c159deb-654f464c3e02ecb69680ad16a3493442:getPixels\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET APOD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/planetary/apod?date=2024-01-01&api_key={{api_key}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2024-01-01",
+							"description": "The date of the APOD image "
+						},
+						{
+							"key": "api_key",
+							"value": "{{api_key}}",
+							"description": "key"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/planetary/apod?api_key={{api_key}}&date=2024-01-01",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"planetary",
+								"apod"
+							],
+							"query": [
+								{
+									"key": "api_key",
+									"value": "{{api_key}}",
+									"description": "key"
+								},
+								{
+									"key": "date",
+									"value": "2024-01-01",
+									"description": "The date of the APOD image "
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 23 Oct 2024 04:17:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Expose-Headers",
+							"value": "X-RateLimit-Limit, X-RateLimit-Remaining"
+						},
+						{
+							"key": "Age",
+							"value": "1"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Via",
+							"value": "https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])"
+						},
+						{
+							"key": "X-Api-Umbrella-Request-Id",
+							"value": "cimuc7acukcu6preff0g"
+						},
+						{
+							"key": "X-Cache",
+							"value": "MISS"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Ratelimit-Limit",
+							"value": "2000"
+						},
+						{
+							"key": "X-Ratelimit-Remaining",
+							"value": "1946"
+						},
+						{
+							"key": "X-Vcap-Request-Id",
+							"value": "d9a8bf15-1d35-4825-5a0d-7f8d0c9a101f"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"date\": \"2024-01-01\",\n    \"explanation\": \"Galaxies are fascinating not only for what is visible, but for what is invisible. Grand spiral galaxy NGC 1232, captured in detail by one of the Very Large Telescopes, is a good example.  The visible is dominated by millions of bright stars and dark dust, caught up in a gravitational swirl of spiral arms revolving about the center. Open clusters containing bright blue stars can be seen sprinkled along these spiral arms, while dark lanes of dense interstellar dust can be seen sprinkled between them. Less visible, but detectable, are billions of dim normal stars and vast tracts of interstellar gas, together wielding such high mass that they dominate the dynamics of the inner galaxy.  Leading theories indicate that even greater amounts of matter are invisible, in a form we don't yet know. This pervasive dark matter is postulated, in part, to explain the motions of the visible matter in the outer regions of galaxies.    Free APOD Lecture: January 9, 2024 to the Amateur Astronomers of Association of New York\",\n    \"hdurl\": \"https://apod.nasa.gov/apod/image/2401/ngc1232b_vlt_3969.jpg\",\n    \"media_type\": \"image\",\n    \"service_version\": \"v1\",\n    \"title\": \"NGC 1232: A Grand Design Spiral Galaxy\",\n    \"url\": \"https://apod.nasa.gov/apod/image/2401/ngc1232b_vlt_960.jpg\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET Mars Rover Photos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/mars-photos/api/v1/rovers/Perseverance/photos?earth_date=2024-10-20&page=2&camera=NAVCAM_LEFT&api_key={{api_key}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"mars-photos",
+						"api",
+						"v1",
+						"rovers",
+						"Perseverance",
+						"photos"
+					],
+					"query": [
+						{
+							"key": "earth_date",
+							"value": "2024-10-20",
+							"description": "Querying by Earth date"
+						},
+						{
+							"key": "page",
+							"value": "2",
+							"description": "Paginated Results"
+						},
+						{
+							"key": "camera",
+							"value": "NAVCAM_LEFT",
+							"description": "Navigation Camera - Left"
+						},
+						{
+							"key": "api_key",
+							"value": "{{api_key}}",
+							"description": "key"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/mars-photos/api/v1/rovers/Perseverance/photos?earth_date=2024-10-20&page=2&api_key={{api_key}}&camera=NAVCAM_LEFT",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"mars-photos",
+								"api",
+								"v1",
+								"rovers",
+								"Perseverance",
+								"photos"
+							],
+							"query": [
+								{
+									"key": "earth_date",
+									"value": "2024-10-20",
+									"description": "Querying by Earth date"
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"description": "Paginated Results"
+								},
+								{
+									"key": "api_key",
+									"value": "{{api_key}}",
+									"description": "key"
+								},
+								{
+									"key": "camera",
+									"value": "NAVCAM_LEFT",
+									"description": "Navigation Camera - Left"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 23 Oct 2024 04:18:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Age",
+							"value": "2"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"99a923a29ae1c5f4a3ee680aad6fcf15\""
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1729657115&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=RQnfG0zD%2BMteSSoQHsblFefpdPJK%2BRxqCdGhGJZRldI%3D\"}]}"
+						},
+						{
+							"key": "Reporting-Endpoints",
+							"value": "heroku-nel=https://nel.heroku.com/reports?ts=1729657115&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=RQnfG0zD%2BMteSSoQHsblFefpdPJK%2BRxqCdGhGJZRldI%3D"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=63072000; includeSubDomains"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains; preload"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 vegur, https/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])"
+						},
+						{
+							"key": "X-Api-Umbrella-Request-Id",
+							"value": "cimuch6cg73nmlrjjlt0"
+						},
+						{
+							"key": "X-Cache",
+							"value": "MISS"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-Ratelimit-Limit",
+							"value": "2000"
+						},
+						{
+							"key": "X-Ratelimit-Remaining",
+							"value": "1946"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "fbc4643e-9ba9-45c2-b39a-98001eb753e6"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.467944"
+						},
+						{
+							"key": "X-Vcap-Request-Id",
+							"value": "523d5691-9b7f-4380-4629-eed1de7bcbba"
+						},
+						{
+							"key": "X-Xss-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"photos\": [\n        {\n            \"id\": 1273528,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLG_1305_0782799696_972ECM_N0611394NCAM00528_00_2I4J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273529,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLG_1305_0782799705_005ECM_N0611394NCAM00528_00_2I4J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273530,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLG_1305_0782799709_034ECM_N0611394NCAM00528_00_2I4J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273531,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLG_1305_0782799713_162ECM_N0611394NCAM00528_00_2I4J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273532,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLG_1305_0782799717_943ECM_N0611394NCAM00528_00_2I4J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273533,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLG_1305_0782799725_988ECM_N0611394NCAM00528_00_2I4J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273534,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLG_1305_0782799738_925ECM_N0611394NCAM00528_00_2I4J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273535,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLG_1305_0782799742_941ECM_N0611394NCAM00528_00_2I4J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273536,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLG_1305_0782799751_005ECM_N0611394NCAM00528_00_2I4J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273538,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLF_1305_0782798904_566ECM_N0611394NCAM02305_04_195J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273539,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLF_1305_0782798904_566ECM_N0611394NCAM02305_10_195J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273540,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLF_1305_0782799045_605ECM_N0611394NCAM02305_01_195J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273541,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLF_1305_0782799045_605ECM_N0611394NCAM02305_04_195J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273542,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLF_1305_0782799045_605ECM_N0611394NCAM02305_07_195J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273543,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLF_1305_0782799045_605ECM_N0611394NCAM02305_10_195J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273547,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLF_1305_0782798904_566ECM_N0611394NCAM02305_01_195J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": 1273548,\n            \"sol\": 1305,\n            \"camera\": {\n                \"id\": 38,\n                \"name\": \"NAVCAM_LEFT\",\n                \"rover_id\": 8,\n                \"full_name\": \"Navigation Camera - Left\"\n            },\n            \"img_src\": \"https://mars.nasa.gov/mars2020-raw-images/pub/ods/surface/sol/01305/ids/edr/browse/ncam/NLF_1305_0782798904_566ECM_N0611394NCAM02305_07_195J01_1200.jpg\",\n            \"earth_date\": \"2024-10-20\",\n            \"rover\": {\n                \"id\": 8,\n                \"name\": \"Perseverance\",\n                \"landing_date\": \"2021-02-18\",\n                \"launch_date\": \"2020-07-30\",\n                \"status\": \"active\",\n                \"max_sol\": 1305,\n                \"max_date\": \"2024-10-20\",\n                \"total_photos\": 244392,\n                \"cameras\": [\n                    {\n                        \"name\": \"EDL_RUCAM\",\n                        \"full_name\": \"Rover Up-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_DDCAM\",\n                        \"full_name\": \"Descent Stage Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM1\",\n                        \"full_name\": \"Parachute Up-Look Camera A\"\n                    },\n                    {\n                        \"name\": \"EDL_PUCAM2\",\n                        \"full_name\": \"Parachute Up-Look Camera B\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_LEFT\",\n                        \"full_name\": \"Navigation Camera - Left\"\n                    },\n                    {\n                        \"name\": \"NAVCAM_RIGHT\",\n                        \"full_name\": \"Navigation Camera - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_RIGHT\",\n                        \"full_name\": \"Mast Camera Zoom - Right\"\n                    },\n                    {\n                        \"name\": \"MCZ_LEFT\",\n                        \"full_name\": \"Mast Camera Zoom - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_LEFT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"FRONT_HAZCAM_RIGHT_A\",\n                        \"full_name\": \"Front Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_LEFT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Left\"\n                    },\n                    {\n                        \"name\": \"REAR_HAZCAM_RIGHT\",\n                        \"full_name\": \"Rear Hazard Avoidance Camera - Right\"\n                    },\n                    {\n                        \"name\": \"EDL_RDCAM\",\n                        \"full_name\": \"Rover Down-Look Camera\"\n                    },\n                    {\n                        \"name\": \"SKYCAM\",\n                        \"full_name\": \"MEDA Skycam\"\n                    },\n                    {\n                        \"name\": \"SHERLOC_WATSON\",\n                        \"full_name\": \"SHERLOC WATSON Camera\"\n                    },\n                    {\n                        \"name\": \"SUPERCAM_RMI\",\n                        \"full_name\": \"SuperCam Remote Micro Imager\"\n                    },\n                    {\n                        \"name\": \"LCAM\",\n                        \"full_name\": \"Lander Vision System Camera\"\n                    }\n                ]\n            }\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api_key",
+			"value": "pfPbpRLijLdzA0PJ8yRb7Im8mmogydBygkIcUTTf",
+			"type": "string"
+		},
+		{
+			"key": "url",
+			"value": "https://api.nasa.gov/",
+			"type": "string"
+		}
+	]
+}
